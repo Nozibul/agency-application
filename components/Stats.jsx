@@ -1,3 +1,5 @@
+
+
 async function getData(){
   const data = await fetch(process.env.BASE_URL + "StatList");
 
@@ -13,6 +15,7 @@ const Stats = async () => {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
+      
           <div className="mb-8 w-full md:w-1/2 lg:w-1/4 text-center">
             <span className="mb-6 inline-block p-4 rounded bg-green-100">
               <svg

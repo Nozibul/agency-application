@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Marquee from "react-fast-marquee";
 
 async function getData() {
   const data = await fetch(process.env.BASE_URL + "BrandList");
@@ -19,22 +20,27 @@ const Brands = async () => {
           Trusted by brands all over the world
         </h1>
         <div className="flex flex-wrap -mx-2">
-          { brandsData?.length > 0
-            ? brandsData.map((item) => (
-                <div key={item.id} className="mb-12 lg:mb-0 w-full md:w-1/2 lg:w-1/4 px-2">
-                  <Link href="/">
-                    <Image
-                      className="mx-auto"
-                      src={item.image}
-                      alt={item.name}
-                      width={100}
-                      height={30}
-                      priority={true}
-                    />
-                  </Link>
-                </div>
-              ))
-            : null }
+          <Marquee>
+            {brandsData?.length > 0
+              ? brandsData.map((item) => (
+                  <div
+                    key={item.id}
+                    className="mb-12 lg:mb-0 w-full md:w-1/2 lg:w-1/4 px-2"
+                  >
+                    <Link href="/">
+                      <Image
+                        className="mx-auto"
+                        src={item.image}
+                        alt={item.name}
+                        width={400}
+                        height={50}
+                        priority={true}
+                      />
+                    </Link>
+                  </div>
+                ))
+              : null}
+          </Marquee>
         </div>
       </div>
     </section>
