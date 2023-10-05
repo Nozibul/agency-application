@@ -5,8 +5,14 @@ import Navbar from "@/components/shared/Navbar";
 import Contact from "@/components/shared/Contact";
 
 export async function generateMetadata() {
+  const res = await fetch(process.env.BASE_URL + "SiteMeta/home");
+
+  const jsonData = await res.json();
+
   return {
-    title: "Home",
+    title: jsonData[0].title,
+    description: jsonData[0].description,
+    keywords: jsonData[0].keywords,
   };
 }
 

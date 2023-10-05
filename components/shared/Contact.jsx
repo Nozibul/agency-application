@@ -36,7 +36,7 @@ const Contact = () => {
       toast.error("Please fill in all fields.");
       return; // Exit the function to prevent further execution
     }
-    console.log(" data", formData);
+    
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -46,7 +46,6 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
 
-      console.log("response data", response);
       if (!response.ok) throw new Error("Failed to submit form data");
 
       // // Reset the form and clear any previous errors on success
@@ -60,6 +59,7 @@ const Contact = () => {
 
       // Show a success toast message
       toast.success("Form submitted successfully!");
+      
     } catch (error) {
       console.error("Error", error);
       setError("Failed to submit the form. Please try again later.");
