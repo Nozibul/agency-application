@@ -16,7 +16,7 @@ const Brands = async () => {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4 text-center">
-        <h1 className="w-2/5 mx-auto rounded mb-20 text-2xl text-gray-50 bg-emerald-700 p-2 font-bold font-heading">
+        <h1 className="w-1/2 mx-auto rounded mb-20 text-2xl text-gray-50 bg-emerald-700 p-2 font-bold font-heading">
           Trusted by brands all over the world
         </h1>
         <div className="flex flex-wrap -mx-2">

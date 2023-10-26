@@ -94,6 +94,7 @@ const Contact = () => {
           <div className="w-full lg:w-1/2 px-4">
             <div className="max-w-sm mx-auto lg:mr-0 lg:ml-auto">
               <div className="mb-6 py-8 px-6 bg-white shadow rounded-t-3xl rounded-bl-3xl text-center">
+             
                 <form onSubmit={handleSubmit}>
                   {error && <p className="text-red-500 mb-4">{error}</p>}
                   <div className="mb-6">
@@ -139,7 +140,7 @@ const Contact = () => {
                     placeholder="Message"
                   />
                   <button
-                    className="mb-4 py-4 rounded text-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold transition duration-200 w-full"
+                    className="mb-4 py-2 rounded text-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold transition duration-200 w-full"
                     type="submit"
                   >
                     send
